@@ -65,7 +65,7 @@
     async function greet() {
         // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
         greetMsg = await invoke("greet", { name });
-        insert(name);
+        // insert(name);
     }
     setTimeout(() => {
         selectUsers();
@@ -104,22 +104,6 @@
     </form>
 
     <p>{greetMsg}</p>
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Name</th>
-        </tr>
-      </thead>
-      <tbody>
-        {#each todoList as { id, name }}
-          <tr>
-            <td>{id}</td>
-            <td>{name}</td>
-          </tr>
-        {/each}
-      </tbody>
-    </table>
 
 
 </div>
